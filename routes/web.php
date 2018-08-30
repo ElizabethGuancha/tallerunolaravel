@@ -11,6 +11,16 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/pagina1', function () {
+    return view('pagina1', [
+        'name' => 'Elizabeth Guancha',
+        'phone' => '3164897978',
+        'email' => 'elizabethguancha@gmail.com'
+    ] );
+});
+
+    Route::get('/pagina2/{multiplo}', function ($multiplo) {
+        return view('pagina2',[
+            'multiplo' => $multiplo
+        ]);
 });
